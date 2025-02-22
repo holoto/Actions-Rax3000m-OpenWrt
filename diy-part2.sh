@@ -16,8 +16,15 @@ rm -rf feeds/luci/applications/{luci-app-passwall,luci-app-ssr-plus,luci-app-pas
 # git clone https://github.com/sbwml/openwrt_helloworld package/helloworld
 
 # 更新 golang 1.23 版本
+#rm -rf feeds/packages/lang/golang
+#git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
+
+
+rm -rf feeds/packages/net/{alist,adguardhome,mosdns,xray*,v2ray*,v2ray*,sing*,smartdns}
+rm -rf feeds/packages/utils/v2dat
 rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
+git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
+
 
 # 添加luci-app-alist源码
 # git clone https://github.com/sbwml/luci-app-alist package/alist
@@ -34,7 +41,7 @@ git clone https://github.com/coolsnowwolf/luci.git coolsnowwolf-luci
 
 git clone https://github.com/coolsnowwolf/packages.git coolsnowwolf-packages
 
-git clone https://github.com/kiddin9/kwrt-packages kwrt-packages
+#git clone https://github.com/kiddin9/kwrt-packages kwrt-packages
 
 
 # 替换luci-app-zerotier和luci-app-frpc
