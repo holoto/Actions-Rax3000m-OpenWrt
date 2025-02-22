@@ -20,8 +20,8 @@
 #rm -rf feeds/packages/net/{xray-core,xray-plugin,v2ray-core,v2ray-plugin,v2ray-geodata,zerotier,tailscale,tailscaled,sing-box,hysteria,naiveproxy,shadowsocks-rust,tuic-client,microsocks,chinadns-ng,alist,dns2socks,dns2tcp,ipt2socks}
 #rm -rf feeds/luci/applications/{luci-app-passwall,luci-app-ssr-plus,luci-app-passwall,luci-app-passwall2,luci-app-zerotier}
 
-sed -i '1i src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-sed -i '2i src-git small https://github.com/kenzok8/small' feeds.conf.default
+echo ' src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
+echo ' src-git small https://github.com/kenzok8/small' >>feeds.conf.default
 
 
 #echo 'src-git shidahuilang https://github.com/shidahuilang/openwrt-package' >> feeds.conf.default
