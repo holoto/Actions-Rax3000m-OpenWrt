@@ -70,5 +70,22 @@ rm -rf feeds/packages/net/{zerotier,frp,kcptun,haproxy}
 
 # git clone https://github.com/coolsnowwolf/lede.git coolsnowwolf-lede
 
- cp -r coolsnowwolf-lede/package/lean/upx package/
+cp -r coolsnowwolf-lede/package/lean/upx package/
+
 rm -rf coolsnowwolf-lede
+
+ git clone https://github.com/xiaorouji/openwrt-passwall openwrt-passwall
+ git clone https://github.com/xiaorouji/openwrt-passwall2 openwrt-passwall2
+ 
+ git clone  https://github.com/xiaorouji/openwrt-passwall-packages  openwrt-passwall-packages
+
+ cp -rf openwrt-passwall/luci-app-passwall  openwrt-passwall2/luci-app-passwall2 feeds/luci/applications/
+ 
+ cp -rf openwrt-passwall-packages/*  feeds/packages/net/
+
+ rm -rf openwrt-passwall 
+ 
+ rm -rf openwrt-passwall2 
+  
+ rm -rf openwrt-passwall-packages
+ 
